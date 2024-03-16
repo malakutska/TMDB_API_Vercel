@@ -15,9 +15,9 @@ module.exports = async (req, res) => {
   }
   // 如果`api_key`前面存在参数，则`api_key`前面是'&'，否则前面就是是'?'
   if(parsedUrl.query===null){
-    tmdbUrl = `https://api.themoviedb.org/3${requestUrl}?api_key=${common.apiKey}`;
+    tmdbUrl = `https://api.themoviedb.org/3${requestUrl}?api_key=${common.apiKey}&language=ru`;
   }else {
-    tmdbUrl = `https://api.themoviedb.org/3${requestUrl}&api_key=${common.apiKey}`;
+    tmdbUrl = `https://api.themoviedb.org/3${requestUrl}&api_key=${common.apiKey}&language=ru`;
   }
 
   try {

@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
 &sort_by=${query.sort_by}\
 &api_key=${common.apiKey}`;
   }else{
-      tmdbUrl=`https://api.themoviedb.org/3/discover/movie?api_key=${common.apiKey}`
+      tmdbUrl=`https://api.themoviedb.org/3/discover/movie?api_key=${common.apiKey}&language=ru`
   }
   try {
     const response = await axios.get(tmdbUrl);
